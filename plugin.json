@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "g2x",
+  "description": "Connect your agent to G2X GovCon intelligence and supported account workflows.",
+  "version": "0.1.0",
+  "author": {
+    "name": "G2X",
+    "url": "https://g2x.com"
+  },
+  "homepage": "https://g2x.com/docs/connect",
+  "repository": "https://github.com/G2X-Team/govcon-cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "g2x",
+    "govcon",
+    "government-contracting",
+    "mcp"
+  ]
+}
