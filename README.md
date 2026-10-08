@@ -1,26 +1,48 @@
-# G2X — GovCon MCP
+<p align="center">
+  <img src="assets/logo.svg" alt="G2X" width="72" height="72">
+</p>
 
-![G2X](assets/logo.svg)
+<h1 align="center">GovCon for Cursor</h1>
 
-Connect your agent to G2X GovCon intelligence and supported account workflows. This plugin includes a remote MCP connection and a short skill for using G2X.
+<p align="center">Research federal opportunities, companies, and markets in your editor.</p>
 
-## Install and connect
+<p align="center">
+  <a href="https://g2x.com/docs/connect">Connection guide</a> ·
+  <a href="https://g2x.com/pricing">Plans</a> ·
+  <a href="https://govcon.sh">CLI</a>
+</p>
 
-1. Install G2X from the Cursor Marketplace when the listing is available.
-2. Complete the G2X OAuth sign-in flow presented by Cursor.
-3. Confirm that G2X tools are listed, then try: “Find Leidos in G2X and return its company record link.”
+---
 
-A G2X account and network connection are required. Available capabilities depend on the tools, permissions, and plan exposed by your G2X connection. The plugin provides no offline data or standalone GovCon engine.
+Connect Cursor to **GovCon MCP** and add a skill for finding and using the tools available to your G2X account.
 
-The server is `https://mcp.g2x.com/mcp`. Users do not supply client IDs, client secrets, API keys, or headers. See [Connect G2X](https://g2x.com/docs/connect), [G2X plans](https://g2x.com/pricing), and [support](https://g2x.com/support).
+## Start with a question
 
-## Terminal access
+- “Find federal opportunities for cybersecurity services.”
+- “Research a company and link to its records.”
+- “Summarize the results and cite the sources.”
 
-The skill also supports the official [GovCon CLI](https://govcon.sh) when it is installed and the user requests terminal access. Use `govcon login` to sign in and `govcon --help` for supported commands. The plugin does not install the CLI or change its configuration. Both clients rely on authenticated G2X services.
+Sign in with your G2X account. Available tools and data depend on your plan and permissions.
 
-## Local installation
+## Connect
 
-Copy the complete plugin directory to `~/.cursor/plugins/local/g2x/`, then restart Cursor or run **Developer: Reload Window**. Local plugin imports must be allowed by your organization. In Customize, verify the `govcon-mcp` skill and G2X MCP server, complete sign-in, and run a read-only lookup.
+The plugin connects to `https://mcp.g2x.com/mcp`. Sign in through the OAuth flow in Cursor; no client ID, client secret, or API key is needed. See the [connection guide](https://g2x.com/docs/connect) for setup and [support](https://g2x.com/support) for help.
+
+<details>
+<summary><strong>Install from this repository</strong></summary>
+
+1. Copy the plugin files into `~/.cursor/plugins/local/g2x/`.
+2. Restart Cursor or run **Developer: Reload Window**.
+3. In **Customize**, find the `govcon-mcp` skill and **G2X** MCP server, then complete sign-in.
+4. Confirm that tools are listed and try a research question.
+
+Your organization must allow local plugins.
+
+</details>
+
+## Prefer the terminal?
+
+The [GovCon CLI](https://govcon.sh) provides terminal access to G2X. Once installed, run `govcon login` to sign in and `govcon --help` for commands. The skill can use it when you request terminal access. Install the CLI separately.
 
 ## License
 
